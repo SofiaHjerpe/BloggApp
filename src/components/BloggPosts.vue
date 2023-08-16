@@ -1,7 +1,9 @@
 <template>
- <div style="display:flex; flex-direction: column">
-   <p><b>{{ title }}</b>| Date: {{ date }}</p> <br />
-   <p style="max-width: 900px; align-self: center">{{content}}</p>
+ <div class="post">
+    <span style="display: flex; flex-direction: column">
+      <p><b>{{ title }}</b>| Date: {{ date }}</p> <br />
+      <p style="max-width: 900px; align-self: center">{{content}}</p>
+    </span>
      <router-link  :to="{name: 'home'}">
        <button>Go Back</button>
      </router-link>
@@ -28,6 +30,14 @@ export default {
 }
 </script>
 <style scoped>
+.post {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16px;
+  gap: 10px;
+  border-bottom: 2px solid #42b9836e;
+}
 button {
   background-color: #42b983;
   color: #fff;
@@ -35,7 +45,7 @@ button {
   font-weight: 600;
   border-radius: 3px;
   padding: 10px 25px;
-  height: 40px;
   margin-top: 100px;
+  height: 40px;
 }
 </style>

@@ -4,7 +4,6 @@
         <span style="display: flex; flex-direction: column">
           <p><b>{{d.title}} </b>| Date: {{d.date}}</p> <br/>
           <p class="blog-text">{{d.content}}</p>
-          <p class="blog-text" v-if="d.show">{{d.moreContent}}</p>
        </span>
        
      <button>
@@ -21,13 +20,9 @@
  import data from "@/data.js";
  export default {
    data() {
-     console.log(data);
      return {
        posts: data.posts
      }
-   },
-   mounted() {
-     console.log(data);
    }
  }
  </script>
